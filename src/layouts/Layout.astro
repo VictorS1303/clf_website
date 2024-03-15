@@ -1,27 +1,32 @@
 ---
+import CtaBtn from "../components/CallToActionButton.astro";
+import SingleViewCard from "../components/SingleViewCard.astro";
 import "../css/style.css";
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<header></header>
-		<main></main>
-		<footer></footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <slot />
+    </main>
+    <footer></footer>
+  </body>
 </html>
 
 <style>
-	main {
-		max-width: 1200px;
-	}
+  main {
+    max-width: 1200px;
+  }
 </style>

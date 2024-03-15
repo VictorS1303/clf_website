@@ -1,0 +1,22 @@
+---
+const {action} = Astro.props;
+---
+
+<button>{action}</button>
+
+<style>
+    button {
+  background-image: var(--cta-button-background-color);
+    border-radius: 15px;
+  color: #fff;
+    border-radius: 15px;
+    padding: 0.8rem;
+font-family: 'Merriweather', sans-serif;
+}
+
+button:hover {
+   opacity: 50%;
+   transition: 0.1s;
+}
+  
+</style>
