@@ -1,7 +1,9 @@
 ---
-const { data } = Astro.props;
+const { data, id } = Astro.props;
 ---
 
-<article>
-  <h2>{data.name}</h2>
-</article>
+<a href="/udstillinger/2">
+  <article>
+    <h2>{data.name}</h2>
+  </article>
+</a>
