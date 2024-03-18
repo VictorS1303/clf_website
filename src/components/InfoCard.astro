@@ -1,0 +1,65 @@
+---
+const { header, text, click } = Astro.props;
+---
+
+<article class="info-card">
+  <slot />
+  <div class="info-content center-text">
+    <h2>{header}</h2>
+    <p>{text}</p>
+  </div>
+  <div class="button-content">
+    <button class="button">{click}</button>
+  </div>
+</article>
+
+<style>
+  h2 {
+    margin-bottom: 0;
+    /* transform: translateY(-50px); */
+  }
+  .info-card {
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px (0, 0, 0, 0.2);
+    margin: 20px;
+    background-color: var(--card-background-color);
+  }
+  .info-content {
+    text-align: center;
+  }
+  .center-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    /* transform: translateY(-60px); */
+    max-width: 20ch;
+    padding: 1rem 0 2.5rem 0;
+  }
+
+  .button-content {
+    display: flex;
+    padding: 10px 20px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.3s linear;
+    border: none;
+    padding: 10px 20px;
+  }
+
+  .button:hover {
+    color: #000;
+  }
+</style>

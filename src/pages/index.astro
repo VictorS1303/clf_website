@@ -1,5 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import InfoCard from "../components/InfoCard.astro";
 ---
 
 <Layout />
+<InfoCard header="Book en tur" text="Få en personlig guide og bliv vist rundt i København" click="Læse mere">
+  <img src="/vaadin_group.svg" alt="" class="info-img" />
+  <InfoCard />
+</InfoCard>
+
+<style>
+  .info-img {
+    width: 70px;
+    margin-top: 50px;
+  }
+</style>

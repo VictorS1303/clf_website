@@ -1,76 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* Universal */
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
 }
 
 /* Root Scope (HTML tag) */
-:root
-{
-    --primary-background-color: linear-gradient(0deg, rgba(33, 15, 52, 1) 0%, rgba(11, 11, 12, 1) 100%);
-    --primary-text-color: #fff;
-    --card-background-color: #221034;
-    --cta-button-background-color: linear-gradient(0deg, rgba(71, 23, 147, 1) 0%, rgba(109, 19, 132, 1) 100%);
-    --tabs-background-color: linear-gradient(0deg, rgba(162, 114, 211, 1) 0%, rgba(154, 50, 194, 1) 100%);
+:root {
+  --primary-background-color: linear-gradient(0deg, rgba(33, 15, 52, 1) 0%, rgba(11, 11, 12, 1) 100%);
+  --primary-text-color: #fff;
+  --card-background-color: #221034;
+  --cta-button-background-color: linear-gradient(0deg, rgba(71, 23, 147, 1) 0%, rgba(109, 19, 132, 1) 100%);
+  --tabs-background-color: linear-gradient(0deg, rgba(162, 114, 211, 1) 0%, rgba(154, 50, 194, 1) 100%);
 }
 
 /* Body */
-body
-{
-    color: var(--primary-text-color);
+body {
+  color: var(--primary-text-color);
 
-
-    /*
+  /*
         Da vores baggrundsfarve er en linear-gradient, der i CSS opfører sig som et billede,
         er vi nødt til at have background-repeat: no-repeat; på, således at bagrrunden (som i realiteten er et billede),
         ikke gentager sig selv, som et hvilket som helst andet billede vil som standard.
     */
-    background-image: var(--primary-background-color);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
+  background-image: var(--primary-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-
 /* Headings */
-h1, h2, h3
-{
-    font-family: 'Merriweather', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", sans-serif;
 }
 
 /* Paragraphs */
-p
-{
-    font-family: 'Jost', sans-serif;
+p {
+  font-family: "Jost", sans-serif;
 }
 
-
 /* Image & Video */
-img, video
-{
-    display: block;
-    height: auto;
-    width: 100%;
-    object-fit: cover;
+img,
+video {
+  display: block;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* List Items */
-li
-{
-    list-style: none;
+li {
+  list-style: none;
 }
 
 /* Links */
-a
-{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
