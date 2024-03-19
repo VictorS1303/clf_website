@@ -1,5 +1,6 @@
 ---
 import "../css/style.css";
+import Slideshow from "../components/Slideshow.astro";
 const { title } = Astro.props;
 ---
 
@@ -15,7 +16,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<header></header>
-		<main></main>
+		<main>
+			<Slideshow />
+		</main>
 		<footer></footer>
 	</body>
 </html>
