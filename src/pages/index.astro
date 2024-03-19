@@ -21,7 +21,7 @@ import Button from "../components/CallToActionButton.astro"
     <div>
     <h2>Om os</h2>
     <p>Copenhagen Light Festival, startet af Tivoli, Stromma, VNR.tv og Louis Poulsen / D Studio, er en non-profit forening, der præsenterer lyskunst i interaktion med Københavns karakter og æstetik. Sekretariatet styrer daglige opgaver, samarbejder med kunstnere og støtter kuratorudvalget. Kuratorer, med ekspertise inden for lyskunst, tildeler midler baseret på vurderinger af udtryk, placering og interaktion med byen.</p>
-    <Button action="Læs mere"/>
+    <Button class="read-more-btn" action="Læs mere"/>
     </div>
 <div>
     <img src="clf.avif" alt="img">
@@ -39,8 +39,8 @@ import Button from "../components/CallToActionButton.astro"
   <div>
     <h2>Tilmeld Nyhedsbrev</h2>
     <p> Tilmelder du dig vores nyhedsbrev, går du ikke glip af begivenheder under Copenhagen Light Festival. Du vil løbende blive opdateret på nye kunstværker og årligt forberedt på, hvornår lyset vil forvandle København.</p>
-    <Button action="Læs mere"/>
-    <Button action="Tilmeld dig"
+    <div class="flexbutton"><Button action="Læs mere"/>
+    <Button action="Tilmeld dig"/></div>
 </div>
 </article>
 </Layout>
@@ -58,21 +58,31 @@ import Button from "../components/CallToActionButton.astro"
     margin-top: 6rem;
     font-style: italic;
     font-weight: bold;
- background: var( --citat-background-color);
+    background: var( --citat-background-color);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .omos {
+    position: relative;
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-top: 15rem;
     border-top: 0;
     border-left: 0;
     border-right: 3px solid;
-    border-bottom: 3px solid;
-
 }
+
+.omos::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 85%;
+    border-bottom: 3px solid #fff;
+}
+
+
 
 .omos h2 {
     font-style: italic;
@@ -102,11 +112,16 @@ import Button from "../components/CallToActionButton.astro"
 }
 
 .nyhedsbrev p {
-    max-width: 60ch;
+    max-width: 50ch;
     line-height: 2rem;
 }
 
-.nyhedsbrev button {
-
+.flexbutton {
+   display: flex;
+   gap: 30px;
+   margin-top: 1rem;
 }
+
+
+
 </style>
