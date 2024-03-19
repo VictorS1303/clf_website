@@ -62,8 +62,7 @@ video {
 }
 
 /* List Items */
-li {
-  list-style: none;
+
 li {
   list-style: none;
 }
@@ -74,4 +73,3 @@ a {
   color: var(--primary-text-color);
   text-decoration: none;
 }
-
