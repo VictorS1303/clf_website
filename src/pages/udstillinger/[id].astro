@@ -22,31 +22,37 @@ console.log(data);
 ---
 
 <Layout>
-  <Heading />
-  <article>
-    <div>
-      <h2>{data.name}</h2>
-      <img src="/dusomerihimlene.avif" alt="" />
-    </div>
-    <div>
-      <h3>Beskrivelse af værket:</h3>
-      <p>{data.description}</p>
-    </div>
-    <ul>
-      <li><p>Lavet af: {data.artistname}</p></li>
-      <li><p>Lokation: {data.location}</p></li>
-      <li><button>Tilføj til rute</button> <img src="/addtorouteicon.avif" alt="icon" /></li>
-      <li><button>Links</button> <img src="/linkdropdown.avif" alt="icon" /></li>
-    </ul>
-  </article>
+  <main>
+    <Heading />
+    <article>
+      <div>
+        <h2>{data.name}</h2>
+        <img src="/dusomerihimlene.avif" alt="" />
+      </div>
+      <div>
+        <h3>Beskrivelse af værket:</h3>
+        <p>{data.description}</p>
+      </div>
+      <ul>
+        <li><p>Lavet af: {data.artistname}</p></li>
+        <li><p>Lokation: {data.location}</p></li>
+        <li><button>Tilføj til rute</button> <img src="/addtorouteicon.avif" alt="icon" /></li>
+        <li><button>Links</button> <img src="/linkdropdown.avif" alt="icon" /></li>
+      </ul>
+    </article>
+  </main>
 </Layout>
 
 <style>
+  main {
+    max-width: 1200px;
+    margin: auto;
+  }
   article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
   }
 

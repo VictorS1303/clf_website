@@ -14,20 +14,31 @@ console.log(data);
 ---
 
 <Layout>
-  <div class="heading">
-    <Heading />
-  </div>
+  <main>
+    <div class="heading">
+      <Heading />
+    </div>
 
-  <article class="listview">
-    {
-      data.map((udstilling) => {
-        return <Card data={udstilling} />;
-      })
-    }
-  </article>
+    <div class="lysevents">
+      <h1>ALLE LYSVÆRKER OG EVENTS</h1>
+      <h3>I PERIODEN D. 2. - 25 FEBRUAR</h3>
+    </div>
+
+    <article class="listview">
+      {
+        data.map((udstilling) => {
+          return <Card data={udstilling} />;
+        })
+      }
+    </article>
+  </main>
 </Layout>
 
 <style>
+  main {
+    max-width: 1200px;
+    margin: auto;
+  }
   .heading {
     margin-top: 5rem;
   }
@@ -37,5 +48,22 @@ console.log(data);
     grid-template-columns: 1fr;
     gap: 50px;
     max-width: 800px;
+    margin: auto;
+  }
+
+  .lysevents h1,
+  h3 {
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .lysevents h3 {
+    background: var(--citat-background-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .lysevents {
+    margin-bottom: 5rem;
   }
 </style>

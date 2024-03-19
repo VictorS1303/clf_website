@@ -14,51 +14,57 @@ import InfoCard from "../components/InfoCard.astro";
       <source src="https://nicolinemarott.dk/kea/08_ux_ui/hero_video.mp4" type="video/mp4" />
     </video>
   </div>
-  <Heading />
+  <main>
+    <Heading />
 
-  <div class="citat">
-    <p>"Målet ved festivalen er at lyse den mørke måned i Februar op og skabe fælleskab omkring lyset"</p>
-  </div>
-
-  <article class="infocards">
-    <InfoCard header="Ruter til festivalen" text="Lav din personlige rute" click="Læs mere">
-      <img src="/public/Vector (Stroke).svg" alt="ruter" class="info-img" />
-    </InfoCard>
-    <InfoCard header="Se udstillinger" text="Find alle værkerne og find dem du gerne vil se" click="Læs mere">
-      <img src="/public/Vector (Stroke).svg" alt="ruter" class="info-img" />
-    </InfoCard>
-    <InfoCard header="Book en guide" text="Få en personlig guide og bliv vist rundt i København" click="Læs mere">
-      <img src="/public/vaadin_group.svg" alt="ruter" class="info-img2" />
-    </InfoCard>
-  </article>
-
-  <article class="omos">
-    <div>
-      <h2>Om os</h2>
-      <p>Copenhagen Light Festival, startet af Tivoli, Stromma, VNR.tv og Louis Poulsen / D Studio, er en non-profit forening, der præsenterer lyskunst i interaktion med Københavns karakter og æstetik. Sekretariatet styrer daglige opgaver, samarbejder med kunstnere og støtter kuratorudvalget. Kuratorer, med ekspertise inden for lyskunst, tildeler midler baseret på vurderinger af udtryk, placering og interaktion med byen.</p>
-      <Button class="read-more-btn" action="Læs mere" />
+    <div class="citat">
+      <p>"Målet ved festivalen er at lyse den mørke måned i Februar op og skabe fælleskab omkring lyset"</p>
     </div>
-    <div>
-      <img src="clf.avif" alt="img" />
-    </div>
-  </article>
 
-  <article class="nyhedsbrev">
-    <div>
-      <img src="nyhedsbrev.avif" alt="img" />
-    </div>
-    <div>
-      <h2>Tilmeld Nyhedsbrev</h2>
-      <p>Tilmelder du dig vores nyhedsbrev, går du ikke glip af begivenheder under Copenhagen Light Festival. Du vil løbende blive opdateret på nye kunstværker og årligt forberedt på, hvornår lyset vil forvandle København.</p>
-      <div class="flexbutton">
-        <Button action="Læs mere" />
-        <Button action="Tilmeld dig" />
+    <article class="infocards">
+      <InfoCard header="Ruter til festivalen" text="Lav din personlige rute" click="Læs mere">
+        <img src="/public/Vector (Stroke).svg" alt="ruter" class="info-img" />
+      </InfoCard>
+      <InfoCard header="Se udstillinger" text="Find alle værkerne og find dem du gerne vil se" click="Læs mere">
+        <img src="/public/Vector (Stroke).svg" alt="ruter" class="info-img" />
+      </InfoCard>
+      <InfoCard header="Book en guide" text="Få en personlig guide og bliv vist rundt i København" click="Læs mere">
+        <img src="/public/vaadin_group.svg" alt="ruter" class="info-img2" />
+      </InfoCard>
+    </article>
+
+    <article class="omos">
+      <div>
+        <h2>Om os</h2>
+        <p>Copenhagen Light Festival, startet af Tivoli, Stromma, VNR.tv og Louis Poulsen / D Studio, er en non-profit forening, der præsenterer lyskunst i interaktion med Københavns karakter og æstetik. Sekretariatet styrer daglige opgaver, samarbejder med kunstnere og støtter kuratorudvalget. Kuratorer, med ekspertise inden for lyskunst, tildeler midler baseret på vurderinger af udtryk, placering og interaktion med byen.</p>
+        <Button class="read-more-btn" action="Læs mere" />
       </div>
-    </div>
-  </article>
+      <div>
+        <img src="clf.avif" alt="img" />
+      </div>
+    </article>
+
+    <article class="nyhedsbrev">
+      <div>
+        <img src="nyhedsbrev.avif" alt="img" />
+      </div>
+      <div>
+        <h2>Tilmeld Nyhedsbrev</h2>
+        <p>Tilmelder du dig vores nyhedsbrev, går du ikke glip af begivenheder under Copenhagen Light Festival. Du vil løbende blive opdateret på nye kunstværker og årligt forberedt på, hvornår lyset vil forvandle København.</p>
+        <div class="flexbutton">
+          <Button action="Læs mere" />
+          <Button action="Tilmeld dig" />
+        </div>
+      </div>
+    </article>
+  </main>
 </Layout>
 
 <style>
+  main {
+    max-width: 1200px;
+    margin: auto;
+  }
   .video_container {
     height: 80vh;
     overflow: hidden;

@@ -23,8 +23,6 @@
 
 /* Body */
 body {
-  display: flex;
-  flex-direction: column;
   color: var(--primary-text-color);
 
   /*
