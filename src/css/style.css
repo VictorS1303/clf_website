@@ -28,6 +28,7 @@ body {
   color: var(--primary-text-color);
 
   /*
+  /*
         Da vores baggrundsfarve er en linear-gradient, der i CSS opfører sig som et billede,
         er vi nødt til at have background-repeat: no-repeat; på, således at bagrrunden (som i realiteten er et billede),
         ikke gentager sig selv, som et hvilket som helst andet billede vil som standard.
@@ -63,6 +64,8 @@ video {
 /* List Items */
 li {
   list-style: none;
+li {
+  list-style: none;
 }
 
 /* Links */
@@ -71,3 +74,4 @@ a {
   color: var(--primary-text-color);
   text-decoration: none;
 }
+
