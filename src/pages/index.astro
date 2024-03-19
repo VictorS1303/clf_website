@@ -20,12 +20,16 @@ import InfoCard from "../components/InfoCard.astro";
     <p>"Målet ved festivalen er at lyse den mørke måned i Februar op og skabe fælleskab omkring lyset"</p>
   </div>
 
-  <article>
-    <InfoCard header="Ruter til festivalen" text="Lav din personlige rute" click="Læs mere" />
-    <img src="/public/Vector (Stroke).svg" alt="" />
-    <InfoCard />
-
-    <InfoCard />
+  <article class="infocards">
+    <InfoCard header="Ruter til festivalen" text="Lav din personlige rute" click="Læs mere">
+      <img src="/public/Vector (Stroke).svg" alt="ruter" class="info-img" />
+    </InfoCard>
+    <InfoCard header="Se udstillinger" text="Find alle værkerne og find dem du gerne vil se" click="Læs mere">
+      <img src="/public/Vector (Stroke).svg" alt="ruter" class="info-img" />
+    </InfoCard>
+    <InfoCard header="Book en guide" text="Få en personlig guide og bliv vist rundt i København" click="Læs mere">
+      <img src="/public/vaadin_group.svg" alt="ruter" class="info-img" />
+    </InfoCard>
   </article>
 
   <article class="omos">
@@ -63,7 +67,7 @@ import InfoCard from "../components/InfoCard.astro";
 
   .citat {
     text-align: center;
-    margin-top: 6rem;
+
     font-style: italic;
     font-weight: bold;
     background: var(--citat-background-color);
@@ -126,5 +130,16 @@ import InfoCard from "../components/InfoCard.astro";
     display: flex;
     gap: 30px;
     margin-top: 1rem;
+  }
+
+  .info-img {
+    width: 70px;
+    margin-top: 50px;
+  }
+
+  .infocards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5rem;
   }
 </style>

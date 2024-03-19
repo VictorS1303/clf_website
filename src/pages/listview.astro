@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/ListCard.astro";
+import Heading from "../components/Heading.astro";
 
 const data = await fetch("https://gqzwqtoqyaxmxurxizow.supabase.co/rest/v1/udstillinger", {
   method: "GET",
@@ -13,9 +14,28 @@ console.log(data);
 ---
 
 <Layout>
-  {
-    data.map((udstilling) => {
-      return <Card data={udstilling} />;
-    })
-  }
+  <div class="heading">
+    <Heading />
+  </div>
+
+  <article class="listview">
+    {
+      data.map((udstilling) => {
+        return <Card data={udstilling} />;
+      })
+    }
+  </article>
 </Layout>
+
+<style>
+  .heading {
+    margin-top: 5rem;
+  }
+
+  .listview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 800px;
+  }
+</style>
