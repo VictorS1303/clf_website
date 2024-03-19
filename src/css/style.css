@@ -18,10 +18,13 @@
   --cta-button-background-color: linear-gradient(0deg, rgba(71, 23, 147, 1) 0%, rgba(109, 19, 132, 1) 100%);
   --tabs-background-color: linear-gradient(0deg, rgba(162, 114, 211, 1) 0%, rgba(154, 50, 194, 1) 100%);
   --citat-background-color: linear-gradient(90deg, rgba(128, 200, 246, 1) 19%, rgba(206, 82, 223, 1) 58%);
+  --link-hover-text-color: #9a32c2;
 }
 
 /* Body */
 body {
+  display: flex;
+  flex-direction: column;
   color: var(--primary-text-color);
 
   /*
@@ -64,5 +67,7 @@ li {
 
 /* Links */
 a {
+  font-family: "Jost", sans-serif;
+  color: var(--primary-text-color);
   text-decoration: none;
 }

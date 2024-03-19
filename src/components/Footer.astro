@@ -1,0 +1,152 @@
+<footer class="footer" id="footer">
+    <div class="contact-info">
+        <h3>Kontakt:</h3>
+        <div>
+            <label for="mail">Mail:</label>
+            <a href="mailto:info@copenhagenlightfestival.org">
+                info@copenhagenlightfestival.org
+            </a>
+        </div>
+
+        <div>
+            <label for="telephone">Telefon:</label>
+            <a href="tel:25556604"> +45 25 55 66 04</a>
+        </div>
+    </div>
+    <div class="socials">
+        <a href="#">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+    </div>
+    <div class="newsletter">
+        <h3>
+            Tilmeld
+            <br />
+            Nyhedsbrev
+        </h3>
+
+        <form action="/" class="form" id="form">
+            <div>
+                <input
+                    type="text"
+                    class="name-input"
+                    id="name-input"
+                    placeholder="Navn*"
+                    required
+                />
+            </div>
+
+            <div>
+                <input
+                    type="email"
+                    class="email-input"
+                    id="email-input"
+                    placeholder="E-mail*"
+                    required
+                />
+            </div>
+        </form>
+    </div>
+</footer>
+
+<style>
+    footer {
+        font-family: "Jost";
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 50px;
+        min-height: 400px;
+        margin-top: auto;
+    }
+
+    footer .contact-info {
+        font-style: italic;
+        font-weight: 500;
+        margin-bottom: 80px;
+    }
+
+    footer .contact-info h3 {
+        font-size: 20px;
+    }
+
+    footer .contact-info > div {
+        margin-top: 25px;
+    }
+
+    footer .contact-info div label {
+        font-family: inherit;
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    footer .socials {
+        display: flex;
+        justify-content: space-around;
+        margin-left: -50px;
+        font-size: 40px;
+    }
+
+    footer .newsletter {
+        margin-top: 80px;
+    }
+
+    footer .newsletter h3 {
+        font-family: "Jost";
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.5rem;
+        color: #d9d9d9;
+        margin-bottom: 30px;
+    }
+
+    footer .newsletter form {
+        margin-bottom: 30px;
+    }
+
+    footer .newsletter form input {
+        font-family: inherit;
+        background-color: transparent;
+        border-bottom: 2px solid var(--primary-text-color);
+        color: var(--primary-text-color);
+    }
+
+    footer .newsletter form input:first-child {
+        margin-bottom: 20px;
+    }
+
+    footer .newsletter form input::placeholder {
+        color: var(--primary-text-color);
+    }
+
+    @media screen and (min-width: 800px) {
+        footer {
+            flex-direction: row;
+            align-items: center;
+            hegiht: 30px;
+        }
+
+        footer .contact-info {
+            margin-top: 50px;
+        }
+
+        footer .contact-info > div {
+            margin-top: 35px;
+        }
+
+        footer .socials {
+            gap: 80px;
+        }
+
+        footer .newsletter {
+            display: flex;
+            gap: 50px;
+        }
+    }
+</style>
