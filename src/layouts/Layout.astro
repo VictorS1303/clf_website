@@ -3,6 +3,9 @@ import CtaBtn from "../components/CallToActionButton.astro";
 import SingleViewCard from "../components/SingleViewCard.astro";
 import "../css/style.css";
 import Heading from "../components/Heading.astro";
+import Footer from "../components/Footer.astro";
+import Slideshow from "../components/Slideshow.astro";
+import Navigation from "../components/Navigation.astro";
 const { title } = Astro.props;
 ---
 
@@ -14,21 +17,23 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script src="https://kit.fontawesome.com/e05f21b32e.js" crossorigin="anonymous"></script>
     <title>{title}</title>
   </head>
   <body>
-    <header></header>
-
+    <header>
+      <Navigation />
+    </header>
     <main>
       <slot />
     </main>
-    <footer></footer>
+    <Footer />
   </body>
-</html>
 
-<style>
-  main {
-    max-width: 1200px;
-    margin: auto;
-  }
-</style>
+  <style>
+    main {
+      max-width: 1200px;
+      margin: auto;
+    }
+  </style>
+</html>

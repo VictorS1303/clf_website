@@ -1,0 +1,163 @@
+<header>
+    <i class="fas fa-bars mobile-menu-toggle-btn" id="mobile_menu_toggle_btn"
+    ></i>
+
+    <nav class="main-nav" id="main_nav">
+        <img src="../../public/images/logos/logo.webp" alt="" class="logo" />
+
+        <ul>
+            <li>
+                <a href="index.html" class="active">Forside</a>
+            </li>
+            <li>
+                <a href="listview.html">Udstillinger</a>
+            </li>
+            <li>
+                <a href="routes.html">Ruter</a>
+            </li>
+            <li>
+                <a href="#">Book en guide</a>
+            </li>
+            <li>
+                <a href="#">Om Os</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header .logo {
+        display: none;
+    }
+    .mobile-menu-toggle-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: right 0.4s ease-in;
+    }
+
+    .mobile-menu-toggle-btn.active {
+        right: 220px;
+    }
+
+    nav.main-nav.active {
+        right: 220px;
+    }
+
+    nav.main-nav.active,
+    .mobile-menu-toggle-btn.active {
+        transition: right 0.4s ease-in;
+    }
+
+    nav.main-nav {
+        display: grid;
+        place-content: center;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        background-color: #130c1a;
+        width: 200px;
+        z-index: 3000;
+        transition: right 0.4s ease-in;
+    }
+
+    nav.main-nav.active {
+        right: 0;
+    }
+
+    nav.main-nav ul {
+        white-space: nowrap;
+    }
+
+    nav.main-nav ul li:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    nav.main-nav ul li a {
+        font-family: "Merriweather", sans-serif;
+        font-size: 1rem;
+        color: #fff;
+        transition: color 0.15s ease-in;
+    }
+
+    nav.main-nav ul li a:hover,
+    nav.main-nav ul li a.active {
+        color: var(--link-hover-text-color);
+    }
+
+    nav.main-nav ul li a:hover {
+        transition: color 0.15s ease-in;
+    }
+
+    @media screen and (min-width: 800px) {
+        header .logo {
+            display: block;
+            z-index: 3000;
+        }
+
+        nav.main-nav {
+            position: relative;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            align-items: center;
+            height: 70px;
+            width: 100vw;
+        }
+
+        nav.main-nav .logo {
+            position: relative;
+            left: -5%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        nav.main-nav ul {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 40px;
+        }
+
+        nav.main-nav ul li {
+            display: inline-block;
+        }
+
+        nav.main-nav ul li:not(:last-child) {
+            margin-right: 180px;
+        }
+    }
+</style>
+
+<script>
+    const mobileMenuToggleBtn = document.querySelector(
+        "#mobile_menu_toggle_btn"
+    );
+
+    const mainNav = document.querySelector("#main_nav");
+
+    // EVENT LISTENERS //
+    mobileMenuToggleBtn.addEventListener("click", toggleMobileMenu);
+
+    // FUNCTIONS //
+    function toggleMobileMenu() {
+        mobileMenuToggleBtn.classList.toggle("active");
+        mainNav.classList.toggle("active");
+
+        updateMobileMenuToggleBtnIcon();
+    }
+
+    function updateMobileMenuToggleBtnIcon() {
+        if (mobileMenuToggleBtn.classList.contains("active")) {
+            mobileMenuToggleBtn.classList.remove("fa-bars");
+            mobileMenuToggleBtn.classList.add("fa-times");
+        } else {
+            mobileMenuToggleBtn.classList.add("fa-bars");
+            mobileMenuToggleBtn.classList.remove("fa-times");
+        }
+    }
+</script>
