@@ -4,6 +4,118 @@ import Card from "../components/ListCard.astro";
 import SingleViewCard from "../components/SingleViewCard.astro";
 import Slideshow from "../components/Slideshow.astro";
 import Heading from "../components/Heading.astro";
+import Button from "../components/CallToActionButton.astro";
 ---
 
-<Layout />
+<Layout>
+  <div class="video_container">
+    <video autoplay muted loop>
+      <source src="https://nicolinemarott.dk/kea/08_ux_ui/hero_video.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <Heading />
+
+  <div class="citat">
+    <p>"Målet ved festivalen er at lyse den mørke måned i Februar op og skabe fælleskab omkring lyset"</p>
+  </div>
+
+  <article class="omos">
+    <div>
+      <h2>Om os</h2>
+      <p>Copenhagen Light Festival, startet af Tivoli, Stromma, VNR.tv og Louis Poulsen / D Studio, er en non-profit forening, der præsenterer lyskunst i interaktion med Københavns karakter og æstetik. Sekretariatet styrer daglige opgaver, samarbejder med kunstnere og støtter kuratorudvalget. Kuratorer, med ekspertise inden for lyskunst, tildeler midler baseret på vurderinger af udtryk, placering og interaktion med byen.</p>
+      <Button class="read-more-btn" action="Læs mere" />
+    </div>
+    <div>
+      <img src="clf.avif" alt="img" />
+    </div>
+  </article>
+
+  <article class="nyhedsbrev">
+    <div>
+      <img src="nyhedsbrev.avif" alt="img" />
+    </div>
+    <div>
+      <h2>Tilmeld Nyhedsbrev</h2>
+      <p>Tilmelder du dig vores nyhedsbrev, går du ikke glip af begivenheder under Copenhagen Light Festival. Du vil løbende blive opdateret på nye kunstværker og årligt forberedt på, hvornår lyset vil forvandle København.</p>
+      <div class="flexbutton">
+        <Button action="Læs mere" />
+        <Button action="Tilmeld dig" />
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .video_container {
+    height: 80vh;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .citat {
+    text-align: center;
+    margin-top: 6rem;
+    font-style: italic;
+    font-weight: bold;
+    background: var(--citat-background-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .omos {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 15rem;
+    border-top: 0;
+    border-left: 0;
+    border-right: 3px solid;
+  }
+
+  .omos::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 85%;
+    border-bottom: 3px solid #fff;
+  }
+
+  .omos h2 {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .omos p {
+    max-width: 70ch;
+    line-height: 2rem;
+  }
+
+  .nyhedsbrev {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 7rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    border-left: 3px solid;
+    border-top: 0;
+    border-bottom: 3px solid;
+    border-right: 0;
+  }
+
+  .nyhedsbrev h2 {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .nyhedsbrev p {
+    max-width: 50ch;
+    line-height: 2rem;
+  }
+
+  .flexbutton {
+    display: flex;
+    gap: 30px;
+    margin-top: 1rem;
+  }
+</style>
