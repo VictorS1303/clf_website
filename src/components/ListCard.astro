@@ -1,11 +1,11 @@
 ---
-
+const { data, id } = Astro.props;
 ---
 
-<a href="#"
+<a href="/udstillinger/2"
   ><div class="container">
     <div class="grid">
-      <h2>1. DU SOM ER I HIMLENE!</h2>
+      <h2>{data.name}</h2>
       <p class="readmore">Læs mere ></p>
     </div>
     <img src="/public/img/img1.png" alt="img1" />
@@ -32,11 +32,18 @@
     padding: 10px;
     margin-bottom: 1rem;
   }
-  h2,
+  h2 {
+    font-size: 3rem;
+    margin-right: 1px;
+    color: white;
+    font-weight: 200;
+  }
+
   p {
     font-size: 3rem;
     margin-right: 1px;
     color: white;
+    font-weight: 300;
   }
 
   .readmore {
