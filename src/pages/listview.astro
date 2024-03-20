@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/ListCard.astro";
 import Heading from "../components/Heading.astro";
 
-const data = await fetch("https://gqzwqtoqyaxmxurxizow.supabase.co/rest/v1/udstillinger", {
+const data = await fetch("https://gqzwqtoqyaxmxurxizow.supabase.co/rest/v1/udstillinger?order=id", {
   method: "GET",
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdxendxdG9xeWF4bXh1cnhpem93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTA4OTYsImV4cCI6MjAyNjA2Njg5Nn0.6IGf2QJbt48spwNk0hZn1WHbZJYXT4ljVQvSNiwRaIQ",
