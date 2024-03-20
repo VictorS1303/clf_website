@@ -10,43 +10,43 @@ import Button from "../components/CallToActionButton.astro";
     <div class="btn_personal"><Button action="Personliggør" /></div>
     <div class="btn_seruter"><Button action="Se ruter" /></div>
   </div>
-
-  <style>
-    .personliggør_rute {
-      display: grid;
-      grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      gap: 20px;
-    }
-
-    .personliggør_rute img {
-      grid-column: 1/5;
-      grid-row: 1/5;
-      max-height: 70vh;
-      opacity: 60%;
-    }
-
-    .personliggør_rute p {
-      grid-column: 2/4;
-      grid-row: 2/3;
-      background-image: linear-gradient(0deg, rgba(33, 15, 52, 0.704) 0%, rgba(11, 11, 12, 0.685) 100%);
-      padding: 1rem;
-      max-width: 40ch;
-      justify-self: center;
-      align-self: center;
-      z-index: 1;
-    }
-
-    .btn_personal {
-      grid-column: 2/3;
-      grid-row: 3/4;
-      justify-self: end;
-      z-index: 1;
-    }
-    .btn_seruter {
-      grid-column: 3/4;
-      grid-row: 3/4;
-      z-index: 1;
-    }
-  </style>
 </Layout>
+
+<style>
+  .personliggør_rute {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .personliggør_rute img {
+    grid-column: 1/5;
+    grid-row: 1/5;
+    max-height: 70vh;
+    opacity: 60%;
+  }
+
+  .personliggør_rute p {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-image: linear-gradient(0deg, rgba(33, 15, 52, 0.704) 0%, rgba(11, 11, 12, 0.685) 100%);
+    padding: 1rem;
+    max-width: 40ch;
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+  }
+
+  .btn_personal {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-self: end;
+    z-index: 1;
+  }
+  .btn_seruter {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    z-index: 1;
+  }
+</style>
