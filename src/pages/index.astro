@@ -37,10 +37,12 @@ import InfoCard from "../components/InfoCard.astro";
       <div>
         <h2>Om os</h2>
         <p>Copenhagen Light Festival, startet af Tivoli, Stromma, VNR.tv og Louis Poulsen / D Studio, er en non-profit forening, der præsenterer lyskunst i interaktion med Københavns karakter og æstetik. Sekretariatet styrer daglige opgaver, samarbejder med kunstnere og støtter kuratorudvalget. Kuratorer, med ekspertise inden for lyskunst, tildeler midler baseret på vurderinger af udtryk, placering og interaktion med byen.</p>
-        <Button class="read-more-btn" action="Læs mere" />
       </div>
       <div>
         <img src="clf.avif" alt="img" />
+      </div>
+      <div>
+        <Button action="Læs mere" />
       </div>
     </article>
 
@@ -50,12 +52,12 @@ import InfoCard from "../components/InfoCard.astro";
       <div>
         <h2>Tilmeld Nyhedsbrev</h2>
         <p>Tilmelder du dig vores nyhedsbrev, går du ikke glip af begivenheder under Copenhagen Light Festival. Du vil løbende blive opdateret på nye kunstværker og årligt forberedt på, hvornår lyset vil forvandle København.</p>
+        <div class="flexbutton">
+          <Button action="Læs mere" />
+          <Button action="Tilmeld dig" />
+        </div>
       </div>
       <img class="order" src="nyhedsbrev.avif" alt="img" />
-      <div class="flexbutton">
-        <Button action="Læs mere" />
-        <Button action="Tilmeld dig" />
-      </div>
     </article>
   </main>
 </Layout>
@@ -98,12 +100,22 @@ import InfoCard from "../components/InfoCard.astro";
     padding: 2rem;
   }
 
+  .omos div {
+    position: relative;
+  }
+  article.omos > *:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    translate: 2rem 20px;
+  }
+
   .omos::before {
     content: "";
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 85%;
+    width: calc(100% - 150px);
     border-bottom: 3px solid #9a32c2;
   }
 
@@ -140,7 +152,6 @@ import InfoCard from "../components/InfoCard.astro";
     display: flex;
     gap: 30px;
     margin-top: 1rem;
-    justify-content: center;
   }
 
   .read-more-btn {
@@ -189,8 +200,6 @@ import InfoCard from "../components/InfoCard.astro";
     }
 
     .flexbutton {
-      grid-row: 2/3;
-      grid-column: 2/3;
       margin-bottom: 2rem;
       justify-self: start;
     }

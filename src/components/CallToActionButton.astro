@@ -1,24 +1,21 @@
 ---
-const {action} = Astro.props;
+const { action } = Astro.props;
 ---
 
-<button>{action}</button>
+<button class="read-more-btn">{action}</button>
 
 <style>
-    button {
-  background-image: var(--cta-button-background-color);
+  button {
+    background-image: var(--cta-button-background-color);
     border-radius: 15px;
-  color: #fff;
+    color: #fff;
     border-radius: 15px;
     padding: 0.8rem;
-font-family: 'Merriweather', sans-serif;
-}
+    font-family: "Merriweather", sans-serif;
+  }
 
-button:hover {
-   opacity: 50%;
-   transition: 0.1s;
-}
-  
-
-  
+  button:hover {
+    opacity: 50%;
+    transition: 0.1s;
+  }
 </style>
