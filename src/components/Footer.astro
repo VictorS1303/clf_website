@@ -60,9 +60,11 @@
         font-family: "Jost";
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        padding-left: 50px;
-        min-height: 400px;
+        justify-content: center;
+        gap: 50px;
+        background-image: var(--primary-background-color);
+        min-height: 225px;
+        padding: 50px 0 50px 60px;
         margin-top: auto;
     }
 
@@ -76,8 +78,12 @@
         font-size: 20px;
     }
 
-    footer .contact-info > div {
-        margin-top: 25px;
+    footer .contact-info div:first-child {
+        margin-top: 50px;
+    }
+
+    footer .contact-info div:last-child {
+        margin-top: 0;
     }
 
     footer .contact-info div label {
@@ -87,9 +93,8 @@
     }
 
     footer .socials {
-        display: flex;
-        justify-content: space-around;
-        margin-left: -50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         font-size: 40px;
     }
 
@@ -129,7 +134,9 @@
         footer {
             flex-direction: row;
             align-items: center;
+            gap: 325px;
             hegiht: 30px;
+            max-height: 225px;
         }
 
         footer .contact-info {
