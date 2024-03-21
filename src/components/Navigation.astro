@@ -6,7 +6,7 @@
 
     <ul>
       <li>
-        <a href="/" class="active">Forside</a>
+        <a href="/">Forside</a>
       </li>
       <li>
         <a href="/listview">Udstillinger</a>
@@ -106,9 +106,9 @@
       left: 0;
       display: flex;
       justify-content: space-between;
-      padding: 0 50px;
+      padding: 0 30px;
       align-items: center;
-      height: 90px;
+      height: 70px;
       width: 100vw;
     }
 
@@ -121,7 +121,7 @@
 
     nav.main-nav ul {
       position: relative;
-      top: 40%;
+      top: 50%;
       transform: translateY(-50%);
       margin-right: 40px;
     }
@@ -140,7 +140,6 @@
   const mobileMenuToggleBtn = document.querySelector("#mobile_menu_toggle_btn");
 
   const mainNav = document.querySelector("#main_nav");
-  const navLinks = document.querySelectorAll("nav ul li a");
 
   // EVENT LISTENERS //
   mobileMenuToggleBtn.addEventListener("click", toggleMobileMenu);
