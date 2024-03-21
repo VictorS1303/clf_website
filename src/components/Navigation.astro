@@ -148,9 +148,6 @@
 
     // EVENT LISTENERS //
     mobileMenuToggleBtn.addEventListener("click", toggleMobileMenu);
-    navLinks.forEach((navLink) =>
-        navLink.addEventListener("click", updateActiveLink)
-    );
 
     // FUNCTIONS //
     function toggleMobileMenu() {
@@ -169,9 +166,4 @@
             mobileMenuToggleBtn.classList.remove("fa-times");
         }
     }
-
-    // Updating the active link depending on the current active page
-    // function updateActiveLink(e: Event) {
-
-    // }
 </script>
