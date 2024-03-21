@@ -26,7 +26,7 @@ import InfoCard from "../components/InfoCard.astro";
         <img src="Vector (Stroke).svg" alt="ruter" class="info-img" />
       </InfoCard>
       <InfoCard header="Se udstillinger" text="Find alle værkerne og find dem du gerne vil se" click="Læs mere">
-        <img src="Vector (Stroke).svg" alt="ruter" class="info-img" />
+        <img src="vaerkicon.svg" alt="ruter" class="info-img3" />
       </InfoCard>
       <InfoCard header="Book en guide" text="Få en personlig guide og bliv vist rundt i København" click="Læs mere">
         <img src="vaadin_group.svg" alt="ruter" class="info-img2" />
@@ -64,8 +64,6 @@ import InfoCard from "../components/InfoCard.astro";
   main {
     max-width: 1200px;
     margin: auto;
-    padding: 2rem;
-    margin-left: 2rem;
   }
 
   .infocards {
@@ -73,6 +71,7 @@ import InfoCard from "../components/InfoCard.astro";
     flex-direction: column;
     gap: 3rem;
     margin-top: 5rem;
+    margin-left: 4rem;
   }
   .video_container {
     max-height: 80vh;
@@ -91,8 +90,8 @@ import InfoCard from "../components/InfoCard.astro";
 
   .omos {
     position: relative;
-    margin-top: 15rem;
-    margin-bottom: 10rem;
+
+    margin: 15rem 2rem 10rem 2rem;
     border-top: 0;
     border-left: 0;
     border-right: 3px solid #9a32c2;
@@ -119,8 +118,7 @@ import InfoCard from "../components/InfoCard.astro";
   }
 
   .nyhedsbrev {
-    margin-top: 15rem;
-    margin-bottom: 5rem;
+    margin: 15rem 2rem 5rem 2rem;
     border-left: 3px solid #9a32c2;
     border-top: 3px solid #9a32c2;
     border-bottom: 0;
@@ -156,12 +154,17 @@ import InfoCard from "../components/InfoCard.astro";
     width: 102px;
     margin-top: 50px;
   }
+  .info-img3 {
+    width: 115px;
+    margin-top: 50px;
+  }
 
   @media (min-width: 800px) {
     .infocards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       margin-top: 5rem;
+      margin-left: 0;
     }
 
     .omos {
@@ -189,6 +192,7 @@ import InfoCard from "../components/InfoCard.astro";
       grid-row: 2/3;
       grid-column: 2/3;
       margin-bottom: 2rem;
+      justify-self: start;
     }
 
     .nyhedsbrev div:first-child {
