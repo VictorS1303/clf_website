@@ -25,11 +25,14 @@ import Button from "../components/CallToActionButton.astro"
     <div>
     <h2>Om os</h2>
     <p>Copenhagen Light Festival, startet af Tivoli, Stromma, VNR.tv og Louis Poulsen / D Studio, er en non-profit forening, der præsenterer lyskunst i interaktion med Københavns karakter og æstetik. Sekretariatet styrer daglige opgaver, samarbejder med kunstnere og støtter kuratorudvalget. Kuratorer, med ekspertise inden for lyskunst, tildeler midler baseret på vurderinger af udtryk, placering og interaktion med byen.</p>
+   
     <Button class="read-more-btn" action="Læs mere"/>
     </div>
+    
 <div>
     <img src="clf.avif" alt="img">
 </div>
+ 
 </article>
 
 
@@ -68,20 +71,22 @@ import Button from "../components/CallToActionButton.astro"
     -webkit-background-clip: text;
 }
 
+
+
 .omos {
-    position: relative;
+  
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-top: 15rem;
     border-top: 0;
     border-left: 0;
     border-right:  3px solid #9a32c2;
-    ;
-    
-
+    border-bottom: 3px solid #9a32c2 ;
 }
 
-.omos::before {
+
+
+ .omos::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -89,8 +94,7 @@ import Button from "../components/CallToActionButton.astro"
     width: 85%;
     border-bottom: 3px solid #9a32c2;
 }
- 
-
+  
 
 
 .omos h2 {
@@ -109,9 +113,9 @@ import Button from "../components/CallToActionButton.astro"
     gap: 7rem;
     margin-top: 15rem;
     margin-bottom: 5rem;
-    border-left: 3px solid #9a32c2;
+    border-left: 3px solid #9a32c2 ;
     border-top: 0;
-    border-bottom: 3px solid #9a32c2;
+    border-bottom: 3px solid #9a32c2 ;
     border-right: 0;
 }
 

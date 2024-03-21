@@ -19,6 +19,7 @@
   --tabs-background-color: linear-gradient(0deg, rgba(162, 114, 211, 1) 0%, rgba(154, 50, 194, 1) 100%);
   --citat-background-color: linear-gradient(90deg, rgba(128, 200, 246, 1) 19%, rgba(206, 82, 223, 1) 58%);
   --link-hover-text-color: #9a32c2;
+  --neon-color: 0 0 7px #68108a, 0 0 10px #5b0f78, 0 0 21px #710a9a, 0 0 42px #7e0dab, 0 0 82px #641284;
 }
 
 /* Body */
